@@ -3,6 +3,9 @@ package com.example.belajarchapter6
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import com.example.belajarchapter6.PertemuanKeduan.PertemuanKeduaActivity
 import com.example.belajarchapter6.PertemuanPertama.PertemuanPertamaActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         contohThreadSatu()
         persatu.setOnClickListener {
             startActivity(Intent(this, PertemuanPertamaActivity::class.java))
+        }
+
+        kedua.setOnClickListener {
+            startActivity(Intent(this, PertemuanKeduaActivity::class.java))
         }
     }
 
@@ -27,4 +34,11 @@ class MainActivity : AppCompatActivity() {
 //            tv_dua.text = "welcome Luk"
         }).start()
     }
+
+    fun contohHandler(){
+        val handler = object : Handler(Looper.getMainLooper()){
+
+        }
+    }
+
 }

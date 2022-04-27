@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarChapter6">
         <activity
+            android:name=".PertemuanKeduan.Courotine.CorountinesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertemuanKeduan.LatihanAsyntaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertemuanKeduan.AsynTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertemuanKeduan.PertemuanKeduaActivity"
+            android:exported="false" />
+        <activity
             android:name=".PertemuanPertama.PertemuanPertamaActivity"
             android:exported="false" />
         <activity
