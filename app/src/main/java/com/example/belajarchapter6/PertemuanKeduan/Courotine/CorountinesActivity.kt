@@ -1,8 +1,9 @@
 package com.example.belajarchapter6.PertemuanKeduan.Courotine
 
-import android.nfc.Tag
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.belajarchapter6.R
 import kotlinx.android.synthetic.main.activity_corountines.*
 import kotlinx.coroutines.*
@@ -11,45 +12,41 @@ class CorountinesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_corountines)
+        contohCorountine()
 
-//        contohCorountine()
-//        contohCorountine2()
-
-        CoroutineScope(Dispatchers.Main).launch {
-            contohCorountine2()
-        }
     }
 
-//    fun contoCoroutines(){
-//        GlobalScope.launch {
-//            delay(2000)
-//            Log.d(TAG, "HEllo Lukman")
-//            val a = async { getString("Hello Lukman") }
-//            val hasil = a.await()
-//        }
-//    }
     fun contohCorountine(){
         GlobalScope.launch {
-            delay(2000)
-            tvtest.text = "Hello Lukman"
+            CoroutineScope(Dispatchers.Main).launch {
+                tvtest.text = dotext()
+                bthitung.setOnClickListener {
+                    val b = ettbb.text.toString().toDouble()
+                    val t = ettinggi.text.toString().toDouble()
+                    val h = b/(t*t)
+                    if (h < 18.5){
+                        tvresult.text = "Berat Badan Anda Kurus"
+                    }else if (h>18.5 && h<24.9){
+                        tvresult.text = "Berat Badan Anda Normal"
+                    }else if (h>25 && h<29.9){
+                        tvresult.text = "Berat Badan Anda Overweight"
+                    }else if (h>=30){
+                        tvresult.text = "Berat Badan Anda Obesitas"
+                    }
+                }
+            }
+            CoroutineScope(Dispatchers.IO).launch {
+                Log.d(TAG, "dispather IO")
+            }
+
+            CoroutineScope(Dispatchers.Default).launch {
+                Log.d(TAG, "Default")
+            }
         }
     }
 
-
-    fun contohCorountine2(){
-        GlobalScope.launch {
-            hasil()
-        }
+    suspend fun dotext(): String{
+        return "hello Binar"
     }
 
-//    private suspend fun getString(s: String):String{
-//        delay(1000)
-//        return s
-//    }
-
-    suspend fun hasil(): String{
-        delay(2000)
-        val a = tvtest.setText("Hello Binar")
-        return a.toString()
-    }
 }

@@ -9,6 +9,39 @@
     android:orientation="vertical"
     android:layout_margin="20dp">
 
+    <EditText
+        android:id="@+id/ettbb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Berat Badan"
+        android:layout_below="@+id/textlogo"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/ettinggi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="tinggi Badan"
+        android:layout_below="@+id/edtbb"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/bthitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvresult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
     <TextView
         android:id="@+id/tvtest"
         android:layout_width="wrap_content"

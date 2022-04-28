@@ -21,7 +21,6 @@ class PertemuanKeduaActivity : AppCompatActivity() {
             startActivity(Intent(this, LatihanAsyntaskActivity::class.java))
         }
 
-
         coroutines.setOnClickListener {
             startActivity(Intent(this, CorountinesActivity::class.java))
         }

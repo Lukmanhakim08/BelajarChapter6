@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarChapter6">
         <activity
+            android:name=".PertemuanKetiga.Receiver.ReceiverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertemuanKetiga.Services.ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertemuanKetiga.PertemuanKetigaActivity"
+            android:exported="false" />
+        <activity
             android:name=".PertemuanKeduan.Courotine.CorountinesActivity"
             android:exported="false" />
         <activity
@@ -33,6 +42,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".PertemuanKetiga.Services.ServicePlayer"></service>
     </application>
 
 </manifest>
