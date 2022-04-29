@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.example.belajarchapter6.PertemuanKeduan.PertemuanKeduaActivity
+import com.example.belajarchapter6.PertemuanKeempat.PertemuanKeempatActivity
 import com.example.belajarchapter6.PertemuanKetiga.PertemuanKetigaActivity
 import com.example.belajarchapter6.PertemuanPertama.PertemuanPertamaActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         ketiga.setOnClickListener {
             startActivity(Intent(this, PertemuanKetigaActivity::class.java))
+        }
+
+        keempat.setOnClickListener {
+            startActivity(Intent(this, PertemuanKeempatActivity::class.java))
         }
     }
 

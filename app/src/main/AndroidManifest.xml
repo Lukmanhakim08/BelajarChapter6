@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarChapter6">
         <activity
+            android:name=".PertemuanKeempat.LatihanMVP.view.HitungBBActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertemuanKeempat.MVP.View.MainBangunActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PertemuanKeempat.PertemuanKeempatActivity"
+            android:exported="false" />
+        <activity
             android:name=".PertemuanKetiga.Receiver.ReceiverActivity"
             android:exported="false" />
         <activity
@@ -43,7 +52,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".PertemuanKetiga.Services.ServicePlayer"></service>
+        <service android:name=".PertemuanKetiga.Services.ServicePlayer" />
     </application>
 
 </manifest>
